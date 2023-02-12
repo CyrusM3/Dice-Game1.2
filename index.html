@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <div class="modal hidden">
+      <button class="close--modal">&times;</button>
+      <h1>📒 Instructions</h1>
+      <p>
+        This is a fun dice game in which two players race against each other to
+        reach 100 points. Each turn, a player repeatedly rolls a dice until
+        either a 1 is rolled or the player holds and scores the sum of the
+        rolls. At any moment during a player's turn, the player is faced with
+        two decisions:
+      </p>
+      <p>
+        <strong>Roll</strong>- If the player rolls a <strong>1</strong>: the
+        player scores <strong><span>nothing</span></strong> and it becomes the
+        opponent's turn.
+      </p>
+      <p>
+        <strong>2 - 6</strong> the number is added to the player's current total
+        and the player's turn continues.
+      </p>
+      <p>
+        <strong>Hold</strong> - The current total is added to the player's total
+        score and it becomes the opponent's turn.
+      </p>
+      <p>
+        Good luck <br />
+        <span>Ali</span>
+      </p>
+    </div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0"></p>
+
+        <div class="current">
+          <p class="current-label">current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1"></p>
+        <div class="current">
+          <p class="current-label">current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="/photos/dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New Game</button>
+      <button class="btn btn--roll">🎲 Roll Dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--modal">📝 Instruction</button>
+      <div class="author">
+        <p>Made with 💖in Vancouver by Ali</p>
+      </div>
+    </main>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
